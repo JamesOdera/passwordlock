@@ -93,13 +93,13 @@ def main():
                 print('\n')
 
         elif short_code == 'fu':
-
-            if find_user():
+            
+            if find_user(password):
 
                 print("Enter the passwrd you want to search for")
-                print('\n')
 
-                search_password = input()
+                p_password = input()
+
             if check_existing_users(search_password):
                 search_user = find_user(search_password)
                 print(f"{search_user.first_name} {search_user.last_name}")

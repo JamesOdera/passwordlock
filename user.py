@@ -32,7 +32,7 @@ class User:
         User.user_list.remove(self)
 
     @classmethod
-    def find_by_password(cls,password):
+    def find_by_password(cls, password):
         '''
         Method that takes in a password and returns user that match the password
 
@@ -47,7 +47,7 @@ class User:
                 return user
 
     @classmethod
-    def user_exist(cls,password):
+    def user_exist(cls, password):
         '''
         it checks if user exists from the list.
         Args:
