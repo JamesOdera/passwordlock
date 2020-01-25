@@ -46,7 +46,7 @@ class TestUser(unittest.TestCase):
             to check saving multiple users to our user_list is possible
             '''
             self.new_user.save_user()
-            test_user = User("Test","user","6656","test@user.com") 
+            test_user = User("Test","user","6656","nyangoma.odera@gmail.com") 
             test_user.save_user()
             self.assertEqual(len(User.user_list),2)
 
@@ -55,11 +55,25 @@ class TestUser(unittest.TestCase):
              to test if we can remove user from our list
             '''
             self.new_user.save_user()
-            test_user = User("Test","user","6656","test@user.com") 
+            test_user = User("Test","user","6656","nyangoma.odera@gmail.com") 
             test_user.save_user()
 
             self.new_user.delete_user() # Delete user
             self.assertEqual(len(User.user_list),1)
+
+
+    def test_find_user_by_password(self):
+        '''
+        to check if we can find user by password
+        '''
+
+        self.new_user.save_user()
+        test_user = User("Test","user","6656","nyangoma.odera@gmail.com") 
+        test_user.save_user()
+
+        found_user = User.find_by_password("6656")
+
+        self.assertEqual(found_user.email,test_user.email)
 
 
 
