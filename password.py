@@ -33,3 +33,9 @@ def check_existing_users(password):
     Fxn to check if user exist
     '''
     return User.user_exist(password)
+
+def display_users():
+    '''
+    Fxn to show saved users
+    '''
+    return User.display_users()
