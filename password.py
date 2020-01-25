@@ -72,7 +72,7 @@ def main():
             e_address = input()
 
 
-            save_contacts(create_contact(f_name,l_name,p_password,e_address)) # create and save new contact.
+            save_users(create_user(f_name,l_name,p_password,e_address)) 
             print ('\n')
             print(f"New User {f_name} {l_name} created")
             print ('\n')
