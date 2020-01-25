@@ -46,4 +46,19 @@ class User:
             if user.password == password:
                 return user
 
+    @classmethod
+    def user_exist(cls,password):
+        '''
+        it checks if user exists from the list.
+        Args:
+            passwrd: if it exists
+        Returns :
+            Boolean: True or false depending if user exists
+        '''
+        for user in cls.user_list:
+            if user.password == password:
+                    return True
+
+        return False
+
 
