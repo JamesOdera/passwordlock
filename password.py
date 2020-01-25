@@ -92,17 +92,19 @@ def main():
                 print("You dont seem to have any user list saved yet")
                 print('\n')
 
-            # elif short_code == 'fc':
-                print("Enter the number you want to search for")
+        elif short_code == 'fu':
+            if find_user():
 
-                search_number = input()
-            if check_existing_contacts(search_number):
-                search_contact = find_contact(search_number)
-                print(f"{search_contact.first_name} {search_contact.last_name}")
+                print("Enter the passwrd you want to search for")
+
+                search_password = input()
+            if check_existing_users(search_password):
+                search_password = find_user(search_password)
+                print(f"{search_user.first_name} {search_user.last_name}")
                 print('-' * 20)
 
-                print(f"Phone number.......{search_contact.phone_number}")
-                print(f"Email address.......{search_contact.email}")
+                print(f"Password.......{search_user.password}")
+                print(f"Email address.......{search_user.email}")
             else:
                 print("That contact does not exist")
 
