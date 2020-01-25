@@ -21,3 +21,9 @@ def del_user(user):
     Fxn to delete user
     '''
     user.delete_user()
+
+def find_user(password):
+    '''
+    Fxn to find user by passwrd
+    '''
+    return User.find_by_password(password)
