@@ -23,3 +23,12 @@ class User:
         User.user_list.append(self)
 
 
+    def delete_user(self):
+
+        '''
+        deletes user from list
+        '''
+
+        User.user_list.remove(self)
+
+
