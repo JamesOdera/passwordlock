@@ -34,6 +34,44 @@ class TestCredentials(unittest.TestCase):
         self.new_credentials.save_credentials() 
         self.assertEqual(len(Credentials.credentials_list),1)
 
+    def tearDown(self):
+
+
+            Credentials.credentials_list = []
+
+
+
+    def test_save_multiple_credentials(self):
+            '''
+             save multiple credents
+            '''
+            self.new_credentials.save_credentials()
+            test_save_credentials = Credentials("Test","user","6656","jim@gmail.com") 
+            test_save_credentials.save_credentials()
+            self.assertEqual(len(Credentials.credentials_list),2)
+
+    def test_delete_credentials(self):
+            
+            self.new_credentials.save_credentials()
+            test_save_credentials = Credentials("Test","user","6656","jim@gmail.com") 
+            test_save_credentials.save_credentials()
+
+            self.new_credentials.delete_credentials()
+            self.assertEqual(len(Credentials.credentials_list),1)
+
+    def test_find_credentials_by_password(self):
+        '''
+        test to check if we can find a credential by password and display infor
+        '''
+
+        self.new_credentials.save_credentials()
+        test_save_credentials = Credentials("Test","user","6656","jim@gmail.com")
+        test_save_credentials.save_credentials()
+
+        found_credentials = Credentials.find_by_password("6656")
+
+        self.assertEqual(found_credentials.email,test_save_credentials.email)
+
 
 if __name__ == '__main__':
     unittest.main()

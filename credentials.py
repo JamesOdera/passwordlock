@@ -24,4 +24,16 @@ class Credentials:
 
         Credentials.credentials_list.append(self)
 
+    def delete_credentials(self):
+
+        Credentials.credentials_list.remove(self)
+
+    @classmethod
+    def find_by_password(cls,password):
+      
+
+        for credentials in cls.credentials_list:
+            if credentials.password == password:
+                return credentials
+
     
