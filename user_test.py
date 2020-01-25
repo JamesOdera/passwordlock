@@ -107,7 +107,11 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_user.email,pyperclip.paste())
 
 
-class TestCredentials(unittest.TestCase)
+class TestCredentials(unittest.TestCase):
+    '''
+    test class that defines credentials behaviour
+    '''
+    
 
 
 
