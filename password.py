@@ -93,9 +93,11 @@ def main():
                 print('\n')
 
         elif short_code == 'fu':
+
             if find_user():
 
                 print("Enter the passwrd you want to search for")
+                print('\n')
 
                 search_password = input()
             if check_existing_users(search_password):
@@ -106,7 +108,7 @@ def main():
                 print(f"Password.......{search_user.password}")
                 print(f"Email address.......{search_user.email}")
             else:
-                print("That contact does not exist")
+                print(" does not exist")
 
 
 
