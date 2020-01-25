@@ -1,6 +1,7 @@
 import unittest # Importing the unittest module
 import pyperclip
 from user import User # Importing the user class
+from credentials import Credentials
 
 class TestUser(unittest.TestCase):
 
@@ -104,6 +105,9 @@ class TestUser(unittest.TestCase):
         User.copy_email("6656")
 
         self.assertEqual(self.new_user.email,pyperclip.paste())
+
+
+class TestCredentials(unittest.TestCase)
 
 
 
