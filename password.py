@@ -86,7 +86,7 @@ def main():
     print('\n')
 
     while True:
-        print("Use these short codes : cu - create a user a/c, du - display users, fu -find a user, ex -exit the  list ")
+        print("Use these short codes : cu - create a user a/c, du - display users, fu -find a user, cc - create credential, dc - display credential, fc - find credential, ex -exit the  list ")
 
         short_code = input().lower()
 
@@ -107,10 +107,34 @@ def main():
             e_address = input()
 
 
-            save_users(create_user(f_name,l_name,p_password,e_address)) 
+            save_users(create_user(n_name,c_credential,p_password,e_address)) 
             print ('\n')
             print(f"New User {f_name} {l_name} created")
             print ('\n')
+        
+        # credent
+        if short_code == 'cc':
+            print("New Credential")
+            print("-"*10)
+
+            print ("Name ....")
+            n_name = input()
+
+            print("Credential ...")
+            c_credential = input()
+
+            print("Password ...")
+            p_password = input()
+
+            print("Email address ...")
+            e_address = input()
+
+
+            save_credentials(create_credentials(n_name,c_credential,p_password,e_address)) 
+            print ('\n')
+            print(f"New Credential {n_name} {c_credential} created")
+            print ('\n')
+        #
 
         elif short_code == 'du':
 
@@ -126,6 +150,23 @@ def main():
                 print('\n')
                 print("You dont seem to have any user list saved yet")
                 print('\n')
+
+    # credent
+        elif short_code == 'dc':
+
+            if display_credentials():
+                print("Hello! This is a list of your credentials")
+                print('\n')
+
+                for credentials in display_credentials():
+                    print(f"{credentials.name} {credentials.credential} .....{credentials.password}")
+
+                print('\n')
+            else:
+                print('\n')
+                print("You dont seem to have list of credents saved yet")
+                print('\n')    
+    #
 
         elif short_code == 'fu':
             
@@ -144,6 +185,28 @@ def main():
                 print(f"Email address.......{search_user.email}")
             else:
                 print(" does not exist")
+
+## credent
+
+        elif short_code == 'fc':
+            
+            if find_credentials(password):
+
+                print("Enter the passwrd you want to search for")
+
+                p_password = input()
+
+            if check_existing_credentials(search_password):
+                search_credentials = find_credentials(search_password)
+                print(f"{search_credentials.name} {search_credentials.credential}")
+                print('-' * 20)
+
+                print(f"Password.......{search_credentials.password}")
+                print(f"Email address.......{search_credentials.email}")
+            else:
+                print(" does not exist")
+
+    ##
 
 
 
