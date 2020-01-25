@@ -27,3 +27,9 @@ def find_user(password):
     Fxn to find user by passwrd
     '''
     return User.find_by_password(password)
+
+def check_existing_users(password):
+    '''
+    Fxn to check if user exist
+    '''
+    return User.user_exist(password)
