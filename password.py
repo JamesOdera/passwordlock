@@ -55,8 +55,8 @@ def main():
 
         short_code = input().lower()
 
-        if short_code == 'cc':
-            print("New Contact")
+        if short_code == 'cu':
+            print("New User")
             print("-"*10)
 
             print ("First name ....")
@@ -65,16 +65,16 @@ def main():
             print("Last name ...")
             l_name = input()
 
-            print("Phone number ...")
-            p_number = input()
+            print("Password ...")
+            p_password = input()
 
             print("Email address ...")
             e_address = input()
 
 
-            save_contacts(create_contact(f_name,l_name,p_number,e_address)) # create and save new contact.
+            save_contacts(create_contact(f_name,l_name,p_password,e_address)) # create and save new contact.
             print ('\n')
-            print(f"New Contact {f_name} {l_name} created")
+            print(f"New User {f_name} {l_name} created")
             print ('\n')
 
         elif short_code == 'dc':
