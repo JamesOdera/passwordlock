@@ -41,7 +41,41 @@ def display_users():
     '''
     return User.display_users()
 
+### CREDENTIALS
+def create_credentials(name,credential,password,email):
+    '''
+    Fxn to create a new credents
+    '''
+    new_credentials = Credentials(name,credential,password,email)
+    return new_credentials
 
+def save_credentials(credentials):
+
+    credentials.save_credentials()
+
+def del_credentials(credentials):
+   
+    credentials.delete_credentials()
+
+def find_credentials(password):
+    '''
+    Fxn to find crdtls by passwrd
+    '''
+    return Credentials.find_by_password(password)
+
+def check_existing_credentials(password):
+    '''
+    Fxn to check if credents exist
+    '''
+    return Credentials.credentials_exist(password)
+
+def display_credentials():
+    '''
+    Fxn to show saved credents
+    '''
+    return Credentials.display_credentials()
+
+######
 ## Main function
 
 def main():
