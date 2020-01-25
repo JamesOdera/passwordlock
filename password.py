@@ -14,7 +14,7 @@ def save_users(user):
     '''
     Fxn to save user
     '''
-    user.save_users()
+    user.save_user()
 
 def del_user(user):
     '''
