@@ -15,3 +15,9 @@ def save_users(user):
     Fxn to save user
     '''
     user.save_users()
+
+def del_user(user):
+    '''
+    Fxn to delete user
+    '''
+    user.delete_user()
