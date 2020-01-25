@@ -77,19 +77,19 @@ def main():
             print(f"New User {f_name} {l_name} created")
             print ('\n')
 
-        elif short_code == 'dc':
+        elif short_code == 'du':
 
-            if display_contacts():
-                print("Here is a list of all your contacts")
+            if display_users():
+                print("Here is a list of all your users")
                 print('\n')
 
-                for contact in display_contacts():
-                    print(f"{contact.first_name} {contact.last_name} .....{contact.phone_number}")
+                for user in display_users():
+                    print(f"{user.first_name} {user.last_name} .....{user.password}")
 
                 print('\n')
             else:
                 print('\n')
-                print("You dont seem to have any contacts saved yet")
+                print("You dont seem to have any user list saved yet")
                 print('\n')
 
             # elif short_code == 'fc':
