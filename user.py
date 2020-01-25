@@ -16,3 +16,8 @@ class User:
         self.last_name = last_name
         self.password = password
         self.email = email
+
+
+    def save_user(self):    
+
+        User.user_list.append(self)
