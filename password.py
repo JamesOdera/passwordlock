@@ -99,7 +99,7 @@ def main():
 
                 search_password = input()
             if check_existing_users(search_password):
-                search_password = find_user(search_password)
+                search_user = find_user(search_password)
                 print(f"{search_user.first_name} {search_user.last_name}")
                 print('-' * 20)
 
@@ -111,10 +111,10 @@ def main():
 
 
         elif short_code == "ex":
-            print("Bye .......")
+            print("Have a nice time .......")
             break
         else:
-            print("I really didn't get that. Please use the short codes")
+            print("Tumia hizi stuff unaona hapa!")
 
     
 if __name__ == '__main__':
