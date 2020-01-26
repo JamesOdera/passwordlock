@@ -107,7 +107,7 @@ def main():
             e_address = input()
 
 
-            save_users(create_user(n_name,c_credential,p_password,e_address)) 
+            save_users(create_user(f_name,l_name,p_password,e_address)) 
             print ('\n')
             print(f"New User {f_name} {l_name} created")
             print ('\n')
