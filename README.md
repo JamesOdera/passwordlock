@@ -14,7 +14,7 @@ and the credential.
 
 
 ## SET UP INSTRUCTIONS 
-git clone using https://github.com/JamesOdera/passlock.git on your terminal. Navigate to the Password-Lock folder.
+git clone using https://github.com/JamesOdera/passwordlock.git on your terminal. Navigate to the Password-Lock folder.
 Open the folder in your favourite editor,for vscode,is code . and for atom, atom . 
 
 CODEBEAT [![codebeat badge](https://codebeat.co/badges/83a32272-67e9-4d22-91db-ed440f75c88f)](https://codebeat.co/projects/github-com-jamesodera-passwordlock-master)
